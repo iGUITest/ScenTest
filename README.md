@@ -411,8 +411,8 @@ The system provides two query methods:
 Both query methods are guaranteed to execute, with layout queries preceding text queries.
 
 **Configuration Options**:
-- **`both`**: Execute both layout and text queries ✅
-- **`layout`**: If layout query finds the control, skip text query ⚡
+- **`both`**: Execute both layout and text queries. ✅
+- **`layout`**: If layout query finds the control, skip text query. ⚡
 
 Use the `type` attribute to specify the desired behavior.
 
