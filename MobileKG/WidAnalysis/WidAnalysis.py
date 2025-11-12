@@ -7,7 +7,7 @@ input_path = ''
 result = []
 
 
-def get_classfication(image):
+def get_classification(image):
     # for i in os.listdir(input_path):
     y = cnn.predict(image)
     return y

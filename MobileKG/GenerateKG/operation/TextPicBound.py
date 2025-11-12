@@ -4,7 +4,7 @@ from MobileKG.GenerateKG.po.Opt import Opt
 from MobileKG.GenerateKG.po.OCRTex import OCRTex
 from MobileKG.GenerateKG.po.Layout import Layout
 from MobileKG.GenerateKG.operation.MessageCompare import MessageCompare
-from MobileKG.WidAnalysis.WidAnalysis import get_classfication
+from MobileKG.WidAnalysis.WidAnalysis import get_classification
 import cv2 as cv
 
 
@@ -67,7 +67,7 @@ class TextPicBound:
             widget = self.__widgets.get('EditText')
         elif com_ocr_match is not None:
             pic = cv.imread(scene_pic + '/component/result.jpg')
-            classification = get_classfication(
+            classification = get_classification(
                 pic[com_ocr_match['y1']:com_ocr_match['y2'], com_ocr_match['x1']:com_ocr_match['x2']])
             widget = self.__widgets.get(classification)
         return widget

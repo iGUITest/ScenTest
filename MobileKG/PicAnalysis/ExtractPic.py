@@ -52,7 +52,7 @@ class ExtractPic:
             res_i['x2'] = x2
             res_i['y2'] = y2
             component = image[y1:y2, x1:x2]
-            res_i["category"] = WidAnalysis.get_classfication(component)
+            res_i["category"] = WidAnalysis.get_classification(component)
             res_i["ocr"] = bbox.get_ocr_text()
             res.append(res_i)
         res_file = open(res_path + '/' + name, mode='w', encoding='utf-8')
