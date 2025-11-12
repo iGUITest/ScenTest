@@ -5,6 +5,21 @@ import cv2
 
 
 class CNN:
+    """A minimal wrapper for loading and using a Keras CNN model.
+
+    Usage:
+    >>> c = CNN(is_load=True)
+    >>> label = c.predict(image)
+
+    Attributes:
+        data: placeholder for future use (not used currently)
+        model: loaded Keras model (None until load() is called)
+        image_shape: expected input shape for the model (height, width, channels)
+        class_number: number of output classes
+        class_map: list mapping class indices to human-readable labels
+        model_path: filesystem path to the saved model file
+    """
+
     def __init__(self, is_load=True):
         self.data = None
         self.model = None
