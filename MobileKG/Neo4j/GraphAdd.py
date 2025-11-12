@@ -4,8 +4,9 @@ import json
 
 
 class GraphAdd:
+    """Class for adding data to Neo4j graph database"""
     graph = Graph('http://localhost:7474', auth=('neo4j', 'neo4j'))
-    current_scene=''
+    current_scene=''  # Current scene identifier
 
     @classmethod
     def record_create(cls, cypher):
