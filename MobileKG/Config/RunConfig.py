@@ -5,6 +5,7 @@
 # The change value sets the knowledge graph of which function point it is, and it must be one of the SimilarTXTConfig values in this folder
 graph_type = 'login'
 
+
 ####################################################################################################################################
 # Here is the configuration information needed to generate the knowledge graph
 # The directory where the original report is stored (the set value and the path of all files in this path must not contain Chinese characters)
