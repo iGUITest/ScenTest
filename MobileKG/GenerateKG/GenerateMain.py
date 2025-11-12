@@ -55,7 +55,7 @@ def generate():
     print('Begin KG Generation')
     gen = GenerateGraph(generate_data_path)
     gen.execute()
-    print('KG Generation Conplete')
+    print('KG Generation Complete')
     return
 
 
