@@ -4,6 +4,14 @@ import pandas as pd
 
 
 class Test1:
+    """
+    将原始操作日志和模型预测结果合并，生成用于测试的CSV文件。
+    主要逻辑：
+    1. 遍历 origin_path 下的每个 App 及其场景目录
+    2. 读取 operation.txt 中的步骤文本
+    3. 读取 result_path 下对应场景的 JSON 预测结果
+    4. 将两者对齐后写入 CSV
+    """
     def __init__(self, function_point, origin_path, result_path):
         self.function_point = function_point
         self.origin_path = origin_path
