@@ -4,7 +4,9 @@ from MobileKG.LayoutAnalysis.LayoutExtract import *
 from MobileKG.PicAnalysis.utils.tools import draw_rectangle_show_save
 from MobileKG.PicAnalysis.utils.Bbox import Bbox
 
-
+"""
+add exolanataion
+"""
 def create_dir(path):
     if os.path.exists(path):
         return
