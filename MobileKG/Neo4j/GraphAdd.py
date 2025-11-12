@@ -4,11 +4,13 @@ import json
 
 
 class GraphAdd:
+    # Graph database connection
     graph = Graph('http://localhost:7474', auth=('neo4j', 'neo4j'))
     current_scene=''
 
     @classmethod
     def record_create(cls, cypher):
+        # Record the created cypher query to a JSON file for tracking
         file=open('../Test/front_end/GraphAddRecord.json','r',encoding='utf-8')
         content=json.loads(file.read())
         file.close()
