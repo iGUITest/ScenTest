@@ -7,6 +7,13 @@ from MobileKG.GenerateKG.operation.RelationExtract import RelationExtract
 
 # data transformation
 def analyze():
+    """
+    This function is responsible for preprocessing the data, calling the FeatureExtract class for feature extraction.
+    It reads data from the original data path and saves the results to the analysis data path.
+
+    - original_data_path: The path to the original data
+    - analyze_data_path: The path where the result is saved
+    """
     print('Begin Transformation')
     original_path = original_data_path
     result_path = analyze_data_path
@@ -17,6 +24,13 @@ def analyze():
 
 
 def connect():
+    """
+    This function handles the data connection operation. It traverses the data directories, retrieves subdirectories,
+    and performs connection operations using the RelationExtract class to generate connected data.
+
+    - dirs: A list of subdirectory paths
+    - ocr_similarity, opt_similarity, operation_input_similarity, connect_data_path, generate_supply_path: Parameters for RelationExtract
+    """
     print('Begin Connection')
     root = analyze_data_path + '/'
     dirs = []
@@ -32,6 +46,12 @@ def connect():
 
 
 def generate():
+    """
+    This function is responsible for calling the GenerateGraph class to generate a knowledge graph (KG).
+    It will perform the graph generation operation in the specified path.
+
+    - generate_data_path: The path where the generated graph data will be saved
+    """
     print('Begin KG Generation')
     gen = GenerateGraph(generate_data_path)
     gen.execute()
